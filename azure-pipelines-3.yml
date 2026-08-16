@@ -10,11 +10,16 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: JavaToolInstaller@1
+  inputs:
+    versionSpec: '21'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'PreInstalled'
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'gradlew'  # Path to your Gradle wrapper
     tasks: 'build'  # Replace with the tasks you want to run
-  #  options: '-Xmx3072m' 
+    options: '-Xmx3072m' 
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'  # Updated pattern for test result files
     javaHomeOption: 'JDKVersion'
