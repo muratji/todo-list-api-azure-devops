@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.murati.todo.controller.TodoControllerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-08-16T03:01:52.616Z" hostname="mmxmxm-fed" time="0.977">
+  <properties/>
+  <testcase name="GET /todoapi/todos - Should have correct todo structure" classname="com.murati.todo.controller.TodoControllerTest" time="0.931"/>
+  <testcase name="GET /todoapi/todos - Should return non-empty list" classname="com.murati.todo.controller.TodoControllerTest" time="0.011"/>
+  <testcase name="GET /todoapi/todos - Should return valid JSON" classname="com.murati.todo.controller.TodoControllerTest" time="0.008"/>
+  <testcase name="GET /todoapi/todos - Should return 200 status" classname="com.murati.todo.controller.TodoControllerTest" time="0.007"/>
+  <testcase name="GET /todoapi/todos - Should return list of todos" classname="com.murati.todo.controller.TodoControllerTest" time="0.013"/>
+  <system-out><![CDATA[23:01:53.267 [Test worker] INFO org.hibernate.validator.internal.util.Version -- HV000001: Hibernate Validator 9.1.0.Final
+23:01:53.435 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+23:01:53.436 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+23:01:53.438 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 2 ms
+23:01:53.559 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+23:01:53.559 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+23:01:53.559 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+23:01:53.570 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+23:01:53.570 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+23:01:53.570 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+23:01:53.577 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+23:01:53.577 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+23:01:53.578 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+23:01:53.584 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+23:01:53.584 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+23:01:53.584 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /todoapi/todos
+       Parameters = {}
+          Headers = [Content-Type:"application/json"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.murati.todo.controller.TodoController
+           Method = com.murati.todo.controller.TodoController#getAllTodos()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"id":2356,"title":"Todo title","description":"Todo Description","completed":false,"priority":"LOW","dueDate":"2026-08-15T23:01:53.584678646","createdAt":"2026-08-15T23:01:53.584685056","updatedAt":null}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/home/murati/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.18.10/9426d28828bdcdf42666bb7a68c468279ea78f59/byte-buddy-agent-1.18.10.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
