@@ -15,13 +15,17 @@ steps:
     versionSpec: '21'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
-- task: Gradle@3
-  inputs:
-    gradleWrapperFile: 'gradlew'  # Path to your Gradle wrapper
-    tasks: 'build'  # Replace with the tasks you want to run
-    options: '-Xmx1536m' 
-    publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'  # Updated pattern for test result files
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'  # Replace with your JDK version
-    jdkArchitectureOption: 'x64'
+
+- script: ./gradlew build --no-daemon
+  displayName: "Gradle Build"
+
+# - task: Gradle@3
+#   inputs:
+#     gradleWrapperFile: 'gradlew'  # Path to your Gradle wrapper
+#     tasks: 'build'  # Replace with the tasks you want to run
+#     options: '-Xmx1536m' 
+#     publishJUnitResults: true
+#     testResultsFiles: '**/TEST-*.xml'  # Updated pattern for test result files
+#     javaHomeOption: 'JDKVersion'
+#     jdkVersionOption: '1.11'  # Replace with your JDK version
+#     jdkArchitectureOption: 'x64'
