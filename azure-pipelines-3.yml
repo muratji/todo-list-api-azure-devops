@@ -22,7 +22,7 @@ steps:
     key: 'gradle | "$(Agent.OS)" | build.gradle'
     restoreKeys: |
       gradle | "$(Agent.OS)"
-    path: '$(GRADLE_USER_HOME)'
+    path: '$(Pipeline.Workspace)/.gradle'
   displayName: 'Cache Gradle'
 
   # 3. Make gradlew executable
