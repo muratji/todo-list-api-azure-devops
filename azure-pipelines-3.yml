@@ -16,14 +16,14 @@ steps:
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
 
-# 2. Cache Gradle dependencies
-- task: Cache@2
-  inputs:
-    key: 'gradle | "$(Agent.OS)" | build.gradle'
-    restoreKeys: |
-      gradle | "$(Agent.OS)"
-    path: '$(Pipeline.Workspace)/.gradle'
-  displayName: 'Cache Gradle'
+# # 2. Cache Gradle dependencies
+# - task: Cache@2
+#   inputs:
+#     key: 'gradle | "$(Agent.OS)" | build.gradle'
+#     restoreKeys: |
+#       gradle | "$(Agent.OS)"
+#     path: '$(Pipeline.Workspace)/.gradle'
+#   displayName: 'Cache Gradle'
 
   # 3. Make gradlew executable
 - script: chmod +x gradlew
